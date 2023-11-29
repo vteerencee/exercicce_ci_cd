@@ -32,6 +32,15 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     return data_renamed
 
 
+def sample_data(data: pd.DataFrame, n: int = 50) -> pd.DataFrame:
+    """
+    Sélectionne un échantillon aléatoire de n lignes du DataFrame.
+    Entrée: DataFrame et taille de l'échantillon (n)
+    Sortie: Échantillon du DataFrame
+    """
+    return data.sample(n)
+
+
 if __name__ == '__main__':
     """
     Doc
