@@ -3,6 +3,7 @@ CI/CD
 """
 import pandas as pd
 
+
 def main():
     """
     Main
@@ -19,6 +20,7 @@ def main():
     print("Les deux premières lignes du DataFrame : ")
     print(data.head(2))
 
+
 def import_data():
     """
     Import csv file as a dataframe
@@ -27,6 +29,7 @@ def import_data():
     data = pd.read_csv("data/iris.csv")
     print(data.shape)
     return data
+
 
 def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     """
@@ -38,6 +41,7 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
                                 "petal.width": 'petal_width'})
     
     return data_renamed
+
 
 def sample_data(data: pd.DataFrame, sample_size: int = 50) -> pd.DataFrame:
     """
@@ -52,7 +56,8 @@ def sample_data(data: pd.DataFrame, sample_size: int = 50) -> pd.DataFrame:
     """
     sampled_data = data.sample(n=sample_size, random_state=42) #random_state fixe pour assurer la reproductibilité des résultats.
     return sampled_data  
-    
+
+
 def multiply_dataset(data: pd.DataFrame, multiplier: int = 3) -> pd.DataFrame:
     """
     Multiply the dataset by a specified factor using pd.concat.
@@ -68,6 +73,7 @@ def multiply_dataset(data: pd.DataFrame, multiplier: int = 3) -> pd.DataFrame:
     multiplied_data = pd.concat([data] * multiplier, ignore_index=True)
     return multiplied_data
 
+
 def create_total_sepal_column(data: pd.DataFrame) -> pd.DataFrame:
     """
     Create a new column "total_sepal" in the DataFrame as the sum of "sepal_length" and "sepal_width".
@@ -82,6 +88,7 @@ def create_total_sepal_column(data: pd.DataFrame) -> pd.DataFrame:
     data_with_total_sepal = data.assign(total_sepal=data['sepal_length'] + data['sepal_width'])
     return data_with_total_sepal
 
+
 def create_total_petal_column(data: pd.DataFrame) -> pd.DataFrame:
     """
     Create a new column "total_petal" in the DataFrame as the sum of "petal_length" and "petal_width".
@@ -95,6 +102,7 @@ def create_total_petal_column(data: pd.DataFrame) -> pd.DataFrame:
     # Ajoute une nouvelle colonne "total_petal" en faisant la somme de "petal_length" et "petal_width"
     data_with_total_petal = data.assign(total_petal=data['petal_length'] + data['petal_width'])
     return data_with_total_petal
+
 
 if __name__ == '__main__':
     """
