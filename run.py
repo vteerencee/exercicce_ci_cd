@@ -38,8 +38,8 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     data_renamed = data.rename(columns={"sepal.length": 'sepal_length',
         "sepal.width": 'sepal_width',
         "petal.length": 'petal_length',
-        "petal.width": 'petal_width'})
-    
+        "petal.width": 'petal_width'}
+    )
     return data_renamed
 
 
@@ -54,8 +54,8 @@ def sample_data(data: pd.DataFrame, sample_size: int = 50) -> pd.DataFrame:
     Returns:
     - sampled_data (pd.DataFrame): The DataFrame containing the sampled data.
     """
-    sampled_data = data.sample(n=sample_size, random_state=42) #random_state fixe pour assurer la reproductibilité des résultats.
-    return sampled_data  
+    sampled_data = data.sample(n=sample_size, random_state=42) # random_state fixe pour assurer la reproductibilité des résult
+    return sampled_data
 
 
 def multiply_dataset(data: pd.DataFrame, multiplier: int = 3) -> pd.DataFrame:
