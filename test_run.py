@@ -6,6 +6,7 @@ from run import rename_columns
 from run import sample_data
 from run import multiply_dataset
 from run import create_total_sepal_column
+from run import create_total_petal_column
 import numpy as np
 import pandas as pd
 
