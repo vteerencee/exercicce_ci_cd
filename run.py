@@ -36,9 +36,9 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
     Rename dataframe columns
     """
     data_renamed = data.rename(columns={"sepal.length": 'sepal_length',
-                                "sepal.width": 'sepal_width',
-                                "petal.length": 'petal_length',
-                                "petal.width": 'petal_width'})
+        "sepal.width": 'sepal_width',
+        "petal.length": 'petal_length',
+        "petal.width": 'petal_width'})
     
     return data_renamed
 
