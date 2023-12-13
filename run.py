@@ -39,7 +39,7 @@ def rename_columns(data: pd.DataFrame) -> pd.DataFrame:
         "sepal.width": 'sepal_width',
         "petal.length": 'petal_length',
         "petal.width": 'petal_width'
-    })
+        })
     return data_renamed
 
 
